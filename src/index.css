@@ -1,0 +1,356 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+/* Custom  Utility Class */
+@layer components {
+  .navBtn{
+      @apply hidden h-6 md:inline-flex cursor-pointer hover:scale-125 transition-all duration-150 ease-out
+  }
+  .postBtn{
+    @apply h-7 hover:scale-125 cursor-pointer transition-all duration-150 ease-out;
+  }
+}
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap');
+* {
+  box-sizing: border-box;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f2f4f8;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+  .home{
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .homeContainer{
+    border: 1px solid rgba(128, 128, 128, 0.141);
+    border-radius: 10px;
+    width: 80%;
+    height: calc(100vh - 190px);
+    display: flex;
+    overflow: hidden; 
+  }
+
+  /* sidebar */
+  .sidebar{
+    flex: 1;
+    background-color:  #3e3c6109;
+  }
+
+  /* chats*/
+
+  .chats{
+    height: calc(100% - 90px);
+  }
+  .chatBoard{
+    flex:2;
+  }
+
+  .chatBoardInfo{
+    height: 50px;
+    border-left: 3px solid rgba(255, 255, 255, 0.703);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    color: white;
+  
+  }
+
+  /* sideBarNav */
+  .sideBarNav{
+    display: flex;
+    align-items: center;
+    height: 50px;
+    justify-content: space-between;
+    padding: 0 10px ;
+  }
+
+  .sideBarNavImg{
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    margin: 10px 0
+  }
+  .sideBarRight{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+/* Search */
+.search{
+  border-bottom: 1px solid rgba(128, 128, 128, 0.337);
+}
+
+.searchForm{
+  padding: 5px 10px;
+}
+
+.searchForm > input{
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    color: black;
+}
+
+.searchForm > input:focus{
+  outline: none;
+}
+
+/* User Chat */
+.userChat{
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.106);
+  overflow-y: scroll;
+}
+
+
+.userChatImage{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+/* input */
+.input{
+  height: 60px;
+  background-color: white;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.inputText{
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  color: black;
+  
+}
+
+.inputText:focus{
+    outline: none;
+}
+
+.inputSend{
+  display: flex;
+  align-items: center;
+}
+
+/* messages */
+.messages{
+  background-color: #ddddf7;
+  padding: 10px;
+  height: calc(100% - 110px);
+}
+
+/* Message */
+
+.message{
+  display: flex;
+  margin-bottom: 20px;
+  gap: 20px;
+
+}
+.messageInfo{
+  display: flex;
+  flex-direction: column;
+  color: gray;
+  font-weight: 300;
+}
+.messageImage{
+  width: 30%;
+  border-radius: 10px;
+}
+
+.messageContent{
+  max-width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+.messsageText{
+  background-color: gray;
+  padding: 5px 10px;
+  border-radius: 0px 10px 10px 10px;
+  max-width: max-content;
+  color: white;
+}
+
+.ownerMessage{
+    flex-direction: row-reverse;
+  }
+
+.ownerMessageContent{
+  align-items: flex-end;
+}
+
+.ownerMessageContent p {
+  margin-right: 2px;
+}
+
+
+.ownerText{
+  background-color:#ff4500;
+  color: white;
+  border-radius: 10px 0px 10px 10px;
+
+}
+
+
+
+/* Profile */
+
+.profile {
+  margin-bottom: 10rem;
+  margin-top: 2rem;
+  padding: 1rem;
+  max-width: 34rem;
+  
+}
+
+.profileHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logOut {
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #ff4500;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+}
+
+.profileDetailsHeader {
+  display: flex;
+  justify-content: space-between;
+  max-width: 500px;
+}
+
+.pageHeader {
+  font-size: 1.5rem;
+  font-weight:500;
+}
+
+
+.profileDetailsHeader {
+  display: flex;
+  justify-content: space-between;
+  max-width: 500px;
+}
+
+.personalDetailsText {
+  font-weight: 600;
+}
+
+.changePersonalDetails {
+  cursor: pointer;
+  font-weight: 600;
+  color: #ff4500;
+}
+
+.profileCard {
+  background-color: transparent;
+  border-radius: 1rem;
+  padding:1rem 0px;
+  box-shadow: rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+}
+
+.profileDetails {
+  display: flex;
+  flex-direction: column;
+}
+
+.profileName,
+.profileEmail,
+.profileAddress,
+.profileAddressActive,
+.profileEmailActive,
+.profileNameActive {
+  all: unset;
+  margin: 0.3rem 0;
+  font-weight: 600;
+  width: 100%;
+
+}
+.profileNameActive {
+  background-color: white;
+}
+
+.profileEmail,
+.profileAddress,
+.profileAddressActive,
+.profileEmailActive {
+  font-weight: 500;
+}
+.profileEmailActive {
+  background-color: white;
+}
+
+.profileAddressActive {
+  background-color: rgba(44, 44, 44, 0.1);
+}
+
+
+/* Media Queries */
+
+@media only screen and (max-width: 600px){
+  .homeContainer{
+    width: 95%;
+  }
+
+}
+
+@media only screen and (max-width: 500px){
+  .userChatImage{
+    display: none;
+  }
+  .sideBarNavName{
+    font-size: 13px;
+  }
+}
+
+@media only screen and (max-width: 667px){
+  .messageInfo{
+    display: none;
+  }
+
+  .ownerMessageContent p {
+    margin-right: 0px;
+  }
+}
